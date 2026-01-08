@@ -75,7 +75,7 @@ export default function Contact() {
   ]
 
   const socialLinks = [
-    { icon: FaLinkedin, url: 'https://linkedin.com', label: 'LinkedIn', gradient: 'from-blue-500 to-blue-600' },
+    { icon: FaLinkedin, url: 'https://www.linkedin.com/in/manojthakurkkr/', label: 'LinkedIn', gradient: 'from-blue-500 to-blue-600' },
     { icon: FaGithub, url: 'https://github.com', label: 'GitHub', gradient: 'from-gray-600 to-gray-700' },
     { icon: FaEnvelope, url: 'mailto:manojthakurkkr@gmail.com', label: 'Email', gradient: 'from-pink-500 to-rose-500' },
   ]
@@ -169,7 +169,7 @@ export default function Contact() {
                         transition={{ delay: index * 0.1 }}
                         whileHover={{ scale: 1.15, y: -5 }}
                         whileTap={{ scale: 0.95 }}
-                        className={`w-14 h-14 rounded-xl bg-gradient-to-br ${social.gradient} flex items-center justify-center text-white shadow-lg hover:shadow-2xl transition-all`}
+                        className={`w-14 h-14 rounded-xl bg-navbar flex items-center justify-center text-white shadow-lg hover:shadow-2xl transition-all`}
                         aria-label={social.label}
                       >
                         <Icon size={20} />

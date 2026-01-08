@@ -8,7 +8,7 @@ export default function Footer() {
 
   const socialLinks = [
     { icon: FaGithub, url: 'https://github.com', label: 'GitHub' },
-    { icon: FaLinkedin, url: 'https://linkedin.com', label: 'LinkedIn' },
+    { icon: FaLinkedin, url: 'https://www.linkedin.com/in/manojthakurkkr/', label: 'LinkedIn' },
     { icon: FaEnvelope, url: 'mailto:manojthakurkkr@gmail.com', label: 'Email' },
   ]
 
@@ -23,8 +23,8 @@ export default function Footer() {
             className="text-gray-400 text-center md:text-left"
           >
             <p className="flex items-center justify-center md:justify-start">
-              © {currentYear} Portfolio. Made with{' '}
-              <FaHeart className="mx-2 text-red-500 animate-pulse" /> using Next.js & Tailwind CSS
+              © {currentYear} Manoj Kumar. Made with{' '}
+              <FaHeart className="mx-2 text-[rgb(224,17,149)] animate-pulse" /> using Next.js & Tailwind CSS
             </p>
           </motion.div>
 

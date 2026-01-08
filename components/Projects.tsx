@@ -13,6 +13,7 @@ const projects = [
     github: '#',
     demo: 'https://we-ace.com',
     gradient: 'from-purple-500 to-pink-500',
+    image: '/images/we-ace.png',
     icon: FaRocket,
   },
   {
@@ -22,6 +23,7 @@ const projects = [
     technologies: ['React', 'Node.js', 'MongoDB', 'AWS', 'Tailwind'],
     github: '#',
     demo: 'https://listerpros.com',
+    image: '/images/listerpros.png',
     gradient: 'from-cyan-500 to-blue-500',
     icon: FaCode,
   },
@@ -33,17 +35,8 @@ const projects = [
     github: '#',
     demo: 'https://skkouting.com',
     gradient: 'from-blue-500 to-indigo-500',
+    image: '/images/skkouting.png',
     icon: FaRocket,
-  },
-  {
-    title: 'Velocifund',
-    description:
-      'Web application providing comprehensive financial services to customers with secure workflows.',
-    technologies: ['React', 'Node.js', 'MySQL', 'Docker', 'Nginx'],
-    github: '#',
-    demo: 'https://skkouting.com/',
-    gradient: 'from-amber-500 to-red-500',
-    icon: FaCode,
   },
   {
     title: 'Lucy',
@@ -55,6 +48,28 @@ const projects = [
     image: '/images/lucy.png',
     icon: FaRocket,
   },
+  {
+    title: 'zameensale',
+    description:
+      'online land marketplace where people can buy, sell, and search for land properties.',
+    technologies: ['Node.js', 'MySQL', 'Docker', 'Nginx'],
+    github: '#',
+    demo: 'https://zameensale.com/',
+    gradient: 'from-amber-500 to-red-500',
+    image: '/images/zameensale.png',
+    icon: FaCode,
+  },
+  {
+    title: 'cutekanxu',
+    description:
+      'Kids and Baby fashion items including clothes, shoes, accessories and many more non-fashion essential baby items available.',
+    technologies: ['PHP', 'Wordpress','Plugin','MySQL', 'Docker', 'Nginx'],
+    github: '#',
+    demo: 'https://cutekanxu.com/',
+    gradient: 'from-amber-500 to-red-500',
+    image: '/images/cutekanxu.png',
+    icon: FaCode,
+  }
 ]
 
 export default function Projects() {

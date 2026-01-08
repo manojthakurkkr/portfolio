@@ -106,7 +106,7 @@ export default function Skills() {
               className="glass-strong rounded-3xl p-8 hover:shadow-2xl hover:shadow-[0_10px_30px_-5px_rgba(224,17,149,0.2)] transition-all group"
             >
               <div className="flex items-center mb-8">
-                <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${category.gradient} flex items-center justify-center text-3xl mr-4 shadow-lg`}>
+                <div className={`w-16 h-16 rounded-2xl bg-navbar flex items-center justify-center text-3xl mr-4 shadow-lg`}>
                   {category.icon}
                 </div>
                 <h3 className="text-2xl font-bold text-white">{category.title}</h3>
