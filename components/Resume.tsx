@@ -48,9 +48,9 @@ const experience = [
 
 const education = [
   {
-    degree: 'Bachelor of Science in Computer Science',
-    school: 'University Name',
-    period: '2014 - 2018',
+    degree: 'Bachelor of Computer Applications',
+    school: 'IK Gujral Punjab Technical University',
+    period: '2021 - 2023',
     description: 'Specialized in Software Engineering and Distributed Systems',
   },
 ]
