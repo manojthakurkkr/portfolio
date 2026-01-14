@@ -89,8 +89,7 @@ export default function Resume() {
             Resume
           </motion.span>
           <h2 className="text-5xl md:text-6xl font-extrabold mb-6">
-            <span>Work Experience</span>
-            <span className="md:ml-3 text-white">& Education</span>
+            <span>Work Experience & Education</span>
           </h2>
           <div className="w-32 h-1 bg-navbar from-primary-500 to-accent-500 mx-auto rounded-full mb-8"></div>
           <motion.button
@@ -153,7 +152,7 @@ export default function Resume() {
                       transition={{ delay: idx * 0.05 }}
                       className="text-gray-300 flex items-start"
                     >
-                      <span className="text-primary-400 mr-3 mt-1.5">▹</span>
+                      <span className="text-[rgb(224,17,149)] mr-3 mt-1.5">▹</span>
                       {responsibility}
                     </motion.li>
                   ))}

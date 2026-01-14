@@ -102,8 +102,7 @@ export default function Contact() {
             Get In Touch
           </motion.span>
           <h2 className="text-5xl md:text-6xl font-extrabold mb-6">
-            <span>Let's Work</span>
-            <span className="md:ml-3 text-white">Together</span>
+            <span>Let's Work Together</span>
           </h2>
           <div className="w-32 h-1 bg-navbar from-primary-500 to-accent-500 mx-auto rounded-full"></div>
           <p className="text-xl text-gray-400 mt-6 max-w-2xl mx-auto">
@@ -119,7 +118,7 @@ export default function Contact() {
             viewport={{ once: true, margin: '-50px' }}
             transition={{ duration: 0.8 }}
           >
-            <div className="glass-strong rounded-3xl p-8 h-full flex flex-col">
+            <div className="glass-strong rounded-3xl p-6 h-full flex flex-col">
               <h3 className="text-3xl font-bold text-white mb-8">Contact Information</h3>
               <div className="space-y-6 mb-8 flex-1">
                 {contactInfo.map((info, index) => {

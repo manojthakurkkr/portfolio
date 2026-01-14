@@ -30,79 +30,76 @@ export default function Navbar({ activeSection }: NavbarProps) {
   ]
 
   const scrollToSection = (id: string) => {
-    const element = document.getElementById(id)
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
-      setIsOpen(false)
-    }
+    setIsOpen(false) // Close menu immediately
+
+    setTimeout(() => {
+      const element = document.getElementById(id)
+      if (element) {
+        const offset = 80 // Your navbar height
+        const bodyRect = document.body.getBoundingClientRect().top
+        const elementRect = element.getBoundingClientRect().top
+        const elementPosition = elementRect - bodyRect
+        const offsetPosition = elementPosition - offset
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        })
+      }
+    }, 150) // Small delay to allow the mobile menu to close
   }
 
   return (
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      transition={{ duration: 0.5 }}
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        scrolled
-          ? 'glass-strong shadow-2xl'
-          : 'bg-transparent'
+      className={`fixed top-0 w-full z-[100] transition-all duration-300 ${
+        scrolled ? 'glass-strong shadow-2xl' : 'bg-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="flex-shrink-0"
-          >
+          <div className="flex-shrink-0">
             <button
               onClick={() => scrollToSection('home')}
-              className="text-2xl font-bold hover:scale-105 transition-transform text-[rgb(224,17,149)]"
+              className="text-2xl font-bold text-[rgb(224,17,149)]"
             >
               Manoj Kumar
             </button>
-          </motion.div>
+          </div>
 
           {/* Desktop Menu */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-2">
-              {navItems.map((item, index) => (
-                <motion.button
+              {navItems.map((item) => (
+                <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  initial={{ opacity: 0, y: -20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1 }}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
                   className={`relative px-4 py-2 rounded-lg text-sm font-medium transition-all ${
-                    activeSection === item.id
-                      ? 'text-white'
-                      : 'text-gray-300 hover:text-white'
+                    activeSection === item.id ? 'text-white' : 'text-gray-300 hover:text-white'
                   }`}
                 >
                   {activeSection === item.id && (
                     <motion.div
                       layoutId="activeSection"
-                      className="absolute inset-0 bg-navbar from-primary-500 to-accent-500 rounded-lg -z-10"
+                      className="absolute inset-0 bg-navbar from-primary-500 to-accent-500 rounded-lg -z-10 bg-blue-600" // Added fallback bg color
                       transition={{ type: 'spring', bounce: 0.2, duration: 0.6 }}
                     />
                   )}
                   <span className="relative z-10">{item.label}</span>
-                </motion.button>
+                </button>
               ))}
             </div>
           </div>
 
           {/* Mobile menu button */}
           <div className="md:hidden">
-            <motion.button
-              whileTap={{ scale: 0.9 }}
+            <button
               onClick={() => setIsOpen(!isOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-lg text-white hover:bg-white/10 focus:outline-none"
+              className="inline-flex items-center justify-center p-2 rounded-lg text-white hover:bg-white/10"
             >
               {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
-            </motion.button>
+            </button>
           </div>
         </div>
       </div>
@@ -114,23 +111,21 @@ export default function Navbar({ activeSection }: NavbarProps) {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden glass-strong border-t border-white/10"
+            className="md:hidden glass-strong border-t border-white/10 overflow-hidden bg-slate-900"
           >
-            <div className="px-2 pt-2 pb-3 space-y-1">
+            <div className="px-4 pt-2 pb-6 space-y-2">
               {navItems.map((item) => (
-                <motion.button
+                <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  whileHover={{ x: 10 }}
-                  whileTap={{ scale: 0.95 }}
-                  className={`block px-4 py-3 rounded-lg text-base font-medium w-full text-left transition-all ${
+                  className={`block px-4 py-4 rounded-xl text-lg font-medium w-full text-left transition-all ${
                     activeSection === item.id
-                      ? 'text-white bg-navbar from-primary-500 to-accent-500'
+                      ? 'text-white bg-blue-600'
                       : 'text-gray-300 hover:text-white hover:bg-white/5'
                   }`}
                 >
                   {item.label}
-                </motion.button>
+                </button>
               ))}
             </div>
           </motion.div>

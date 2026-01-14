@@ -89,8 +89,7 @@ export default function Skills() {
             Skills & Technologies
           </span>
           <h2 className="text-5xl md:text-6xl font-extrabold mb-6">
-            <span>Technical</span>
-            <span className="md:ml-3 text-white">Expertise</span>
+            <span>Technical Expertise</span>
           </h2>
           <div className="w-32 h-1 bg-navbar from-primary-500 to-accent-500 mx-auto rounded-full"></div>
           <div className="w-32 h-1 bg-skills from-primary-500 to-accent-500 mx-auto rounded-full"></div>

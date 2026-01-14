@@ -95,8 +95,7 @@ export default function Projects() {
             Portfolio
           </motion.span>
           <h2 className="text-5xl md:text-6xl font-extrabold mb-6">
-            <span>Featured</span>
-            <span className="md:ml-3 text-white">Projects</span>
+            <span>Featured Projects</span>
           </h2>
           <div className="w-32 h-1 bg-navbar from-primary-500 to-accent-500 mx-auto rounded-full"></div>
           <p className="text-xl text-gray-400 mt-6 max-w-2xl mx-auto">
