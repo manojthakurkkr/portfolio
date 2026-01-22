@@ -209,7 +209,7 @@ export default function Resume() {
               ))}
             </div>
 
-            {/* Certifications */}
+            {/* Certifications
             <div className="glass-strong rounded-2xl p-6">
               <div className="flex items-center mb-6">
                 <div className="w-12 h-12 rounded-xl bg-navbar from-cyan-500 to-blue-500 flex items-center justify-center mr-4">
@@ -237,7 +237,7 @@ export default function Resume() {
                   </motion.li>
                 ))}
               </ul>
-            </div>
+            </div> */}
           </motion.div>
         </div>
       </div>
