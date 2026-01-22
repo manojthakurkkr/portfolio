@@ -217,7 +217,7 @@ export default function Resume() {
                 </div>
                 <h3 className="text-2xl font-bold text-white">Certification</h3>
               </div>
-              {/* <ul className="space-y-4">
+              <ul className="space-y-4">
                 {certifications.map((cert, index) => (
                   <motion.li
                     key={index}
@@ -231,10 +231,12 @@ export default function Resume() {
                     <span className="text-color mr-3 mt-1 group-hover:scale-150 transition-transform">
                       ✓
                     </span>
-                    <span className="group-hover:text-white transition-colors">{cert}</span>
+                    <span className="group-hover:text-white transition-colors">
+                      {cert}
+                    </span>
                   </motion.li>
                 ))}
-              </ul> */}
+              </ul>
             </div>
           </motion.div>
         </div>
