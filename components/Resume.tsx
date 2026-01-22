@@ -215,9 +215,7 @@ export default function Resume() {
                 <div className="w-12 h-12 rounded-xl bg-navbar from-cyan-500 to-blue-500 flex items-center justify-center mr-4">
                   <FaCertificate className="text-white text-xl" />
                 </div>
-                <h3 className="text-2xl font-bold text-white">
-                  Certifications
-                </h3>
+                <h3 className="text-2xl font-bold text-white">Certification</h3>
               </div>
               {/* <ul className="space-y-4">
                 {certifications.map((cert, index) => (
