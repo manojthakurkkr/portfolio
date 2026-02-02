@@ -23,7 +23,7 @@ export default function Footer() {
             className="text-gray-400 text-center md:text-left"
           >
             <p className="flex items-center justify-center md:justify-start">
-              © {currentYear} Manoj Kumar.
+              © {currentYear} Manoj Kumar
             </p>
           </motion.div>
 
