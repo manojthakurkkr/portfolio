@@ -69,7 +69,7 @@ export default function Contact() {
   }
 
   const contactInfo = [
-    { icon: FaEnvelope, text: 'manojthakurkkr@gmail.com', link: 'mailto:manojthakurkkr@gmail.com', color: 'text-pink-400' },
+    { icon: FaEnvelope, text: 'Manoj Kumar', link: 'mailto:manojthakurkkr@gmail.com', color: 'text-pink-400' },
     { icon: FaPhone, text: '+91 9802222667', link: 'tel:+919802222667', color: 'text-cyan-400' },
     { icon: FaMapMarkerAlt, text: '#2419/6 Jyoti Nagar Kurukshetra, Haryana India', link: null, color: 'text-purple-400' },
   ]
@@ -118,7 +118,7 @@ export default function Contact() {
             viewport={{ once: true, margin: '-50px' }}
             transition={{ duration: 0.8 }}
           >
-            <div className="glass-strong rounded-3xl p-6 h-full flex flex-col">
+            <div className="glass-strong rounded-3xl p-6 h-full w-full max-w-full flex flex-col">
               <h3 className="text-3xl font-bold text-white mb-8">Contact Information</h3>
               <div className="space-y-6 mb-8 flex-1">
                 {contactInfo.map((info, index) => {
@@ -131,7 +131,7 @@ export default function Contact() {
                       viewport={{ once: true }}
                       transition={{ delay: index * 0.1 }}
                       whileHover={{ x: 10 }}
-                      className="flex items-start group cursor-pointer"
+                      className="flex items-start group cursor-pointer min-w-0"
                     >
                       <div className={`w-12 h-12 rounded-xl bg-navbar from-primary-500 to-accent-500 flex items-center justify-center mr-4 group-hover:scale-110 transition-transform flex-shrink-0`}>
                         <Icon className={`text-white text-xl`} />
@@ -139,12 +139,12 @@ export default function Contact() {
                       {info.link ? (
                         <a
                           href={info.link}
-                          className="text-lg text-gray-300 hover:text-white transition-colors break-words"
+                          className="text-lg text-gray-300 hover:text-white transition-colors break-words min-w-0"
                         >
                           {info.text}
                         </a>
                       ) : (
-                        <span className="text-lg text-gray-300">{info.text}</span>
+                        <span className="text-lg text-gray-300 break-words min-w-0">{info.text}</span>
                       )}
                     </motion.div>
                   )
@@ -153,7 +153,7 @@ export default function Contact() {
 
               <div className="border-t border-white/10 pt-8">
                 <h4 className="text-xl font-bold text-white mb-4">Connect with me</h4>
-                <div className="flex space-x-4">
+                <div className="flex flex-wrap gap-4">
                   {socialLinks.map((social, index) => {
                     const Icon = social.icon
                     return (
