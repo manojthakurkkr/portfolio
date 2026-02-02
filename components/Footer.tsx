@@ -23,8 +23,7 @@ export default function Footer() {
             className="text-gray-400 text-center md:text-left"
           >
             <p className="flex items-center justify-center md:justify-start">
-              © {currentYear} Manoj Kumar. Made with{' '}
-              <FaHeart className="mx-2 text-[rgb(224,17,149)] animate-pulse" /> using Next.js & Tailwind CSS
+              © {currentYear} Manoj Kumar.
             </p>
           </motion.div>
 
